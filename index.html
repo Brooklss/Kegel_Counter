@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kegel Counter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Kegel Workout</h1>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </header>
+    <main>
+        <section id="customization" class="card">
+            <h2>Customize Your Workout</h2>
+            <label for="reps">Reps:</label>
+            <input type="number" id="reps" min="1" max="100" value="10">
+            <label for="contract-time">Contract Time (seconds):</label>
+            <input type="number" id="contract-time" min="1" max="60" value="5">
+            <label for="relax-time">Relax Time (seconds):</label>
+            <input type="number" id="relax-time" min="1" max="60" value="5">
+            <button id="start-workout">Start Workout</button>
+            <h3>Quick Start</h3>
+            <div class="button-group">
+                <button id="warm-up">Warm-Up Contract and Relax</button>
+                <button id="slow-hold">Slow Hold Kegels</button>
+                <button id="fast-pulse">Fast Pulse Kegels</button>
+            </div>
+        </section>
+        <section id="workout" class="hidden card">
+            <h2>Workout</h2>
+            <div id="timer">00:00</div>
+            <div id="progress-bar"></div>
+            <div id="rep-counter">Rep 0 of 0</div>
+            <div id="phase-indicator">Contracting</div>
+            <button id="stop-workout">Stop Workout</button>
+        </section>
+        <section id="results" class="hidden card">
+            <h2>Workout Summary</h2>
+            <div id="summary"></div>
+            <button id="save-progress">Save Progress</button>
+            <button id="back-home">Back to Home</button>
+        </section>
+        <section id="log" class="card">
+            <h2>Workout Log</h2>
+            <div class="log-navigation">
+                <button id="prev-day">&lt;</button>
+                <span id="log-date"></span>
+                <button id="next-day">&gt;</button>
+            </div>
+            <ul id="log-list"></ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

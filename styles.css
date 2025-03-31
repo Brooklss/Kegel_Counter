@@ -1,0 +1,297 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+header {
+    width: 100%;
+    padding: 1em;
+    background: linear-gradient(90deg, #6200ea, #3700b3);
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+header button {
+    background-color: #fff;
+    color: #6200ea;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header button:hover {
+    background-color: #6200ea;
+    color: #fff;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    margin-top: 60px; /* Adjust for fixed header */
+}
+
+.card {
+    background: #fff;
+    padding: 1.5em;
+    margin: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2 {
+    margin: 0.5em 0;
+}
+
+label {
+    display: block;
+    margin: 0.5em 0 0.2em;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 0.7em 1.5em;
+    margin: 0.5em 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #6200ea;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3700b3;
+}
+
+#timer {
+    font-size: 3em;
+    margin: 1em 0;
+}
+
+#progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    margin: 1em 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progress-bar div {
+    height: 100%;
+    background-color: #76c7c0;
+    width: 0;
+    transition: width 0.3s;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode header {
+    background: linear-gradient(90deg, #333, #000);
+}
+
+.dark-mode header button {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode header button:hover {
+    background-color: #000;
+}
+
+.dark-mode .card {
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.dark-mode input[type="number"] {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+
+.dark-mode button {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode button:hover {
+    background-color: #555;
+}
+
+#phase-indicator {
+    font-size: 1.5em;
+    margin: 1em 0;
+}
+
+#stop-workout {
+    background-color: #ff4d4d;
+}
+
+#stop-workout:hover {
+    background-color: #ff1a1a;
+}
+
+#log {
+    width: 100%;
+    max-width: 600px;
+}
+
+#log-list {
+    list-style: none;
+    padding: 0;
+}
+
+#log-list li {
+    background: #f0f0f0;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#log-list li button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.3em 0.6em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#log-list li button:hover {
+    background-color: #ff1a1a;
+}
+
+#back-home {
+    margin-top: 1em;
+    padding: 0.7em 1.5em;
+    background-color: #6200ea;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+#back-home:hover {
+    background-color: #3700b3;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-group button {
+    margin: 0.5em 0;
+}
+
+.log-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.log-navigation button {
+    background-color: #6200ea;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.log-navigation button:hover {
+    background-color: #3700b3;
+}
+
+#log-date {
+    margin: 0 1em;
+    font-size: 1.2em;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    header button {
+        padding: 0.3em 0.6em;
+        font-size: 0.8em;
+    }
+
+    #timer {
+        font-size: 2em;
+    }
+
+    #phase-indicator {
+        font-size: 1.2em;
+    }
+
+    #stop-workout {
+        padding: 0.5em;
+    }
+
+    .log-navigation button {
+        padding: 0.3em 0.6em;
+        font-size: 0.8em;
+    }
+
+    #log-date {
+        font-size: 1em;
+    }
+}
